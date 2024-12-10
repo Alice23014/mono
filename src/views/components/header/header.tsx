@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 import Logo from "../../../assets/images/logo.svg";
 import Statistic from "../../../assets/images/statistic.svg";
 import Search from "../../../assets/images/search.svg";
+
 import styles from "./header.module.sass";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
-        <button className={styles.headerBurger}></button>
+        <button className={styles.headerBurger}>
+          <div className={styles.headerBurgerTop}></div>
+          <div className={styles.headerBurgerBottom}></div>
+        </button>
         <nav>
           <ul className={styles.headerNav}>
             <li>

@@ -1,0 +1,28 @@
+.breadcrumbs
+    padding: 21px 0 25px
+    background: #F5F5F5
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    &Container
+        display: flex
+        justify-content: center
+    &List
+        display: flex
+        gap: 50px
+        align-items: center
+    &Item
+        position: relative
+        font-size: 12px !important
+        & a
+            color: #797986 !important
+        &:last-child a
+            color: #C9C9CF !important
+        &:not(:last-child)::after
+            content: ''
+            position: absolute
+            width: 5px
+            height: 5px
+            border-radius: 50%
+            background: #797986
+            right: -25px
+            top: 50%
+            transform: translateY(-50%)

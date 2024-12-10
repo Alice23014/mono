@@ -1,16 +1,15 @@
-import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
-import { Packaging } from "./pages/Packaging";
-import { Eqipment } from "./pages/Equipment";
-import { Service } from "./pages/Service";
-import { NotFound } from "./pages/NotFound";
+import { Routes, Route } from "react-router-dom";
+import { Packaging } from "./pages/packaging-page";
+import { Eqipment } from "./pages/equipment-page";
+import { Service } from "./pages/service-page";
+import { NotFound } from "./pages/not-found-page";
 
 import { Layout } from "./views/components/Layout";
-import { Contacts } from "./pages/Contacts";
+import { Contacts } from "./pages/contacts-page";
 
+import "./App.css";
 
-
-function App() {
+export const App = () => {
   return (
     <>
       <Routes>
@@ -24,6 +23,4 @@ function App() {
       </Routes>
     </>
   );
-}
-
-export default App;
+};

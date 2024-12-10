@@ -1,0 +1,72 @@
+.form
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 30px
+    max-width: 630px
+    width: 100%
+    &Field
+        position: relative
+        height: max-content
+    &Label
+        color: #797986
+        position: absolute
+        top: 50%
+        left: 20px
+        transform: translateY(-50%)
+        font-size: 16px
+        transition: font-size .2s linear, top .2s linear
+        &.filled 
+            font-size: 12px
+            top: 8px
+    &Input
+        padding: 10px 20px
+        border-radius: 14px
+        background: #F5F5F5
+        height: 52px
+        color: #262633
+        width: 100%
+        font-size: 16px
+        border: transparent 1px solid
+        transition: border .2s linear, background .2s linear
+        &:hover, &:focus-within, &:focus-visible
+            border: 1px solid #E6E6E6
+            background: #fff
+            outline: unset
+        &:placeholder-shown
+            background: #F5F5F5
+            border: transparent 1px solid
+        &[aria-invalid="true"]
+            background: rgba(191, 39, 56, 0.12)
+            color: #BF2738
+        &:focus-within + .formLabel,
+        &:focus-visible + .formLabel,
+        &:placeholder-shown + .formLabel
+            font-size: 12px
+            top: 8px
+            
+    &Textarea
+        grid-area: 2 / 1 / 3 / 3
+        & label
+            top: 20px
+        & textarea
+            resize: none
+            padding-top: 32px
+            width: 100%
+            height: 133px
+
+    &Checkbox
+        grid-area: 3 / 1 / 4 / 3
+        width: 100%
+        display: flex
+        gap: 16px
+        align-items: center
+    &Submit
+        font-family: "RoadRadio", sans-serif
+        padding: 19px 28px
+        background: #BF2738
+        color: #fff
+        border-radius: 14px
+        width: max-content
+    
+    
+    
